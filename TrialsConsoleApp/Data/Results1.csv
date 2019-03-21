@@ -1,0 +1,5 @@
+TrialID	ResponseIsValid	Responded	ResponseTime	ResponseWorldTime	ResponseTrialTime	StartCode	StartWorldTime	StartTrialTime	StartIsNoGo	EndWorldTime	EndTrialTime	LineCount	Explanation
+1	True	True	4176	199367	14283	V4_RD_con_1	195191	10107	False	205237	20153	9	User correctly responded to a picture with a complex code.
+2	True	True	5890	227419	15717	F1_DD_neu_1	221529	9827	False	231608	19906	8	User correctly responded to a picture with a complex code.
+3	False	True	-1574	2619000	8471	P_RD_nogo_1	2620574	10045	True	2630541	20012	8	User responded too early, before the testpicture was given.
+4	False	True	15426	12636000	8471	P_RD_nogo_1	12620574	10045	True	12630541	20012	8	User responded too late and also should not have responded at all to a NoGo.

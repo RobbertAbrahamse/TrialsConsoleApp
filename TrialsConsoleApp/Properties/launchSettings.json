@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TrialsConsoleApp": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Development\\Teaching\\Trials\\TrialsConsoleApp\\TrialsConsoleApp\\Data\\TrialData1.csv\" \"C:\\Development\\Teaching\\Trials\\TrialsConsoleApp\\TrialsConsoleApp\\Data\\Results1.csv\""
+    }
+  }
+}

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace TrialsConsoleApp.Trials.DataLogTrials.DataLogFiles
 {
     public class DataLogLine
     {
-        public string[] LineDataSeparators = { ";" };
-
-        public DataLogLine(DataLogFile dataLogFile, int sourceLineIndex, string line)
+        public DataLogLine(DataLogFile dataLogFile, int sourceLineIndex, IList<string> splittedLineDataValues)
         {
             DataLogFile = dataLogFile;
             SourceLineIndex = sourceLineIndex;
-            SplittedLineDataValues = line.Split(LineDataSeparators, StringSplitOptions.None);
+            SplittedLineDataValues = splittedLineDataValues;
         }
 
         // Properties
@@ -27,7 +24,8 @@ namespace TrialsConsoleApp.Trials.DataLogTrials.DataLogFiles
         public string TrialId => GetString(DataLogFile.Headings.TrialHeading.ColumnIndex);
         public string EventType => GetString(DataLogFile.Headings.EventTypeHeading.ColumnIndex);
         public string Code => GetString(DataLogFile.Headings.CodeHeading.ColumnIndex);
-        public int Time => GetInt(DataLogFile.Headings.TimeHeading.ColumnIndex);
+        public int WorldTime => GetInt(DataLogFile.Headings.WorldTimeHeading.ColumnIndex);
+        public int TrialTime => GetInt(DataLogFile.Headings.TrialTimeHeading.ColumnIndex);
 
 
         // Functions (methods)

@@ -31,7 +31,8 @@ namespace TrialsConsoleApp.Trials.DataLogTrials.DataLogFiles
         public DataLogHeading TrialHeading { get; private set; }
         public DataLogHeading EventTypeHeading { get; private set; }
         public DataLogHeading CodeHeading { get; private set; }
-        public DataLogHeading TimeHeading { get; private set; }
+        public DataLogHeading WorldTimeHeading { get; private set; }
+        public DataLogHeading TrialTimeHeading { get; private set; }
 
 
         // Methods
@@ -41,7 +42,8 @@ namespace TrialsConsoleApp.Trials.DataLogTrials.DataLogFiles
             TrialHeading = Headings.FirstOrDefault(h => h.Text == "Trial");
             EventTypeHeading = Headings.FirstOrDefault(h => h.Text == "Event Type");
             CodeHeading = Headings.FirstOrDefault(h => h.Text == "Code");
-            TimeHeading = Headings.FirstOrDefault(h => h.Text == "Time");
+            WorldTimeHeading = Headings.FirstOrDefault(h => h.Text == "Time");
+            TrialTimeHeading = Headings.FirstOrDefault(h => h.Text == "TTime");
         }
 
         // Static methods

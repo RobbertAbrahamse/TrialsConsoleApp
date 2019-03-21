@@ -24,29 +24,6 @@ namespace TrialsConsoleApp.Trials.DataLogTrials
 
         public IList<DataLogTrialEvent> Events { get; }
 
-        public bool IsCorrect
-        {
-            get
-            {
-                var firstPictureEvent = Events.FirstOrDefault(e => e is DataLogTrialPictureEvent pictureEvent && pictureEvent.PictureId != "Starttrial_Box");
-                var firstResponseEvent = Events.FirstOrDefault(e => e is DataLogTrialResponseEvent);
-                
-                // no picture and no response events were present: succes
-                if (firstPictureEvent == null && firstResponseEvent == null)
-                {
-                    return true;
-                }
-
-                // picture and response events were found
-                if (firstPictureEvent != null && firstResponseEvent != null)
-                {
-                    return firstPictureEvent.Time < firstResponseEvent.Time;
-                }
-
-                return false;
-            }
-        }
-
         // Een voorbeeldje waarom een query language gebruiken handig is.
         // Deze functie geeft een IEnumerable (dit is een type waar een enumerator aangevraagt kan worden die door alle elementen
         // in die IEnumerable zitten) waarover men kan itereren (enumereren) door alle elementen heen, e.g. met foreach.

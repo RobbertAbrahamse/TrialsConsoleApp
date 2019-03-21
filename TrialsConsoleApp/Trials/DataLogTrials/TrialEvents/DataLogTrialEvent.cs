@@ -13,7 +13,8 @@ namespace TrialsConsoleApp.Trials.DataLogTrials.TrialEvents
         public DataLogTrial Trial { get; }
         public DataLogLine DataLogLine { get; }
 
-        public int Time => DataLogLine.Time;
+        public int WorldTime => DataLogLine.WorldTime;
+        public int TrialTime => DataLogLine.TrialTime;
 
         public static DataLogTrialEvent CreateEvent(DataLogTrial dataLogTrial, DataLogLine dataLogLine)
         {
